@@ -1,0 +1,54 @@
+{
+  "$id": "rdf-graph.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RDF Graph",
+  "description": "Schema describing an RDF graph as defined by the RDF/JSON serialization format (application/rdf+json). An RDF graph is a set of triples organized by subject, where each subject maps to an array of predicate-object pairs.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "description": "A subject resource identified by its IRI or blank node identifier, mapping predicates to arrays of object values.",
+    "additionalProperties": {
+      "type": "array",
+      "description": "An array of object values associated with a given predicate for this subject.",
+      "items": {
+        "$ref": "#/$defs/objectValue"
+      }
+    }
+  },
+  "$defs": {
+    "objectValue": {
+      "type": "object",
+      "description": "An RDF object value in the RDF/JSON serialization format.",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of the object value: uri for IRI references, literal for literal values, or bnode for blank nodes.",
+          "enum": [
+            "uri",
+            "literal",
+            "bnode"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the object: an IRI string for uri type, lexical form for literal type, or blank node identifier for bnode type."
+        },
+        "lang": {
+          "type": "string",
+          "description": "A BCP47 language tag, present only when the object is a language-tagged literal.",
+          "pattern": "^[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*$"
+        },
+        "datatype": {
+          "type": "string",
+          "description": "The datatype IRI for typed literals. Defaults to xsd:string when not specified.",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

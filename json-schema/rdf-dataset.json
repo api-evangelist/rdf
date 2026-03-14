@@ -1,0 +1,102 @@
+{
+  "$id": "rdf-dataset.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RDF Dataset",
+  "description": "Schema describing an RDF dataset, which consists of a default graph and zero or more named graphs. Datasets are used to organize and partition RDF data into distinct graph contexts, as defined in the RDF 1.1 specification.",
+  "type": "object",
+  "properties": {
+    "defaultGraph": {
+      "type": "array",
+      "description": "The default (unnamed) graph of the dataset containing a collection of RDF quads without an explicit graph name.",
+      "items": {
+        "$ref": "#/$defs/quad"
+      }
+    },
+    "namedGraphs": {
+      "type": "object",
+      "description": "A map of graph names (IRIs) to arrays of quads, representing the named graphs in the dataset.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/quad"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "quad": {
+      "type": "object",
+      "description": "An RDF quad representing a triple within a specific graph context.",
+      "required": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/term",
+          "description": "The subject of the statement, an IRI or blank node."
+        },
+        "predicate": {
+          "$ref": "#/$defs/term",
+          "description": "The predicate of the statement, always an IRI."
+        },
+        "object": {
+          "$ref": "#/$defs/term",
+          "description": "The object of the statement, an IRI, blank node, or literal."
+        },
+        "graph": {
+          "$ref": "#/$defs/term",
+          "description": "The graph name for this quad, an IRI identifying the named graph."
+        }
+      },
+      "additionalProperties": false
+    },
+    "term": {
+      "type": "object",
+      "description": "An RDF term representing a node or value in the graph.",
+      "required": [
+        "termType",
+        "value"
+      ],
+      "properties": {
+        "termType": {
+          "type": "string",
+          "description": "The type of this RDF term.",
+          "enum": [
+            "NamedNode",
+            "BlankNode",
+            "Literal",
+            "DefaultGraph"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the term: an IRI for NamedNode, identifier for BlankNode, or lexical form for Literal."
+        },
+        "language": {
+          "type": "string",
+          "description": "The language tag for language-tagged literal values.",
+          "pattern": "^[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*$"
+        },
+        "datatype": {
+          "type": "object",
+          "description": "The datatype of a literal term.",
+          "properties": {
+            "termType": {
+              "type": "string",
+              "const": "NamedNode"
+            },
+            "value": {
+              "type": "string",
+              "description": "The IRI of the datatype.",
+              "format": "uri"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

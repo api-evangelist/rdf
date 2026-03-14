@@ -1,0 +1,135 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "https://schema.org/",
+
+    "Resource": {
+      "@id": "rdfs:Resource",
+      "@type": "@id"
+    },
+    "Class": {
+      "@id": "rdfs:Class",
+      "@type": "@id"
+    },
+    "Property": {
+      "@id": "rdf:Property",
+      "@type": "@id"
+    },
+    "Statement": {
+      "@id": "rdf:Statement",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype",
+      "@type": "@id"
+    },
+    "NamedGraph": {
+      "@id": "rdf:Graph",
+      "@type": "@id"
+    },
+
+    "subject": {
+      "@id": "rdf:subject",
+      "@type": "@id"
+    },
+    "predicate": {
+      "@id": "rdf:predicate",
+      "@type": "@id"
+    },
+    "object": {
+      "@id": "rdf:object"
+    },
+    "type": {
+      "@id": "rdf:type",
+      "@type": "@id"
+    },
+    "value": {
+      "@id": "rdf:value"
+    },
+
+    "label": {
+      "@id": "rdfs:label",
+      "@type": "xsd:string"
+    },
+    "comment": {
+      "@id": "rdfs:comment",
+      "@type": "xsd:string"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "subPropertyOf": {
+      "@id": "rdfs:subPropertyOf",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "isDefinedBy": {
+      "@id": "rdfs:isDefinedBy",
+      "@type": "@id"
+    },
+    "member": {
+      "@id": "rdfs:member",
+      "@type": "@id",
+      "@container": "@set"
+    },
+
+    "first": {
+      "@id": "rdf:first"
+    },
+    "rest": {
+      "@id": "rdf:rest",
+      "@type": "@id"
+    },
+    "nil": {
+      "@id": "rdf:nil",
+      "@type": "@id"
+    },
+
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "dcterms:description",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "title": {
+      "@id": "dcterms:title",
+      "@type": "xsd:string"
+    },
+    "creator": {
+      "@id": "dcterms:creator",
+      "@type": "@id"
+    },
+    "created": {
+      "@id": "dcterms:created",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:date"
+    }
+  }
+}

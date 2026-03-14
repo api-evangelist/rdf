@@ -1,11 +1,30 @@
 name: RDF
-description: RDF is a technology or concept used in computing and information technology
-  to address specific technical challenges. It provides capabilities that help practitioners
-  build, manage, or improve systems and processes in their domain.
-url: null
+description: The Resource Description Framework (RDF) is a W3C standard for representing
+  information about resources on the web. RDF is the foundation for linked data and
+  the semantic web, providing a graph-based data model where statements are expressed
+  as subject-predicate-object triples. It enables interoperability between systems
+  by using IRIs to identify resources and relationships, supporting multiple serialization
+  formats including RDF/XML, Turtle, N-Triples, and JSON-LD.
+url: https://www.w3.org/RDF/
 tags:
 - RDF
+- Semantic Web
+- Linked Data
+- W3C
+- Knowledge Graph
 created: '2025'
 modified: '2025'
 apis: []
-common: []
+common:
+- type: x-json-schema
+  url: json-schema/rdf-triple.json
+  title: RDF Triple Schema
+- type: x-json-schema
+  url: json-schema/rdf-graph.json
+  title: RDF Graph Schema
+- type: x-json-schema
+  url: json-schema/rdf-dataset.json
+  title: RDF Dataset Schema
+- type: x-json-ld-context
+  url: json-ld/rdf-context.jsonld
+  title: RDF JSON-LD Context

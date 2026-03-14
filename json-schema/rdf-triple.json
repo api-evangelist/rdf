@@ -1,0 +1,64 @@
+{
+  "$id": "rdf-triple.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RDF Triple",
+  "description": "Schema describing an RDF triple (statement) as the fundamental unit of data in the Resource Description Framework. A triple consists of a subject, predicate, and object that together express a relationship between resources.",
+  "type": "object",
+  "required": [
+    "subject",
+    "predicate",
+    "object"
+  ],
+  "properties": {
+    "subject": {
+      "type": "string",
+      "description": "The resource being described, expressed as an IRI (Internationalized Resource Identifier) or blank node identifier.",
+      "format": "uri"
+    },
+    "predicate": {
+      "type": "string",
+      "description": "The property or relationship connecting the subject to the object, expressed as an IRI.",
+      "format": "uri"
+    },
+    "object": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "An IRI reference to another resource.",
+          "format": "uri"
+        },
+        {
+          "$ref": "#/$defs/literal"
+        }
+      ],
+      "description": "The value or resource that the subject is related to via the predicate. Can be an IRI, blank node, or literal value."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "literal": {
+      "type": "object",
+      "description": "An RDF literal value with optional datatype and language tag.",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The lexical form of the literal."
+        },
+        "datatype": {
+          "type": "string",
+          "description": "The IRI identifying the datatype of the literal, defaulting to xsd:string.",
+          "format": "uri"
+        },
+        "language": {
+          "type": "string",
+          "description": "A BCP47 language tag for language-tagged strings.",
+          "pattern": "^[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*$"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
