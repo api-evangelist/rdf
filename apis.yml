@@ -1,3 +1,4 @@
+aid: rdf
 name: RDF
 description: The Resource Description Framework (RDF) is a W3C standard for representing
   information about resources on the web. RDF is the foundation for linked data and
@@ -5,26 +6,19 @@ description: The Resource Description Framework (RDF) is a W3C standard for repr
   as subject-predicate-object triples. It enables interoperability between systems
   by using IRIs to identify resources and relationships, supporting multiple serialization
   formats including RDF/XML, Turtle, N-Triples, and JSON-LD.
-url: https://www.w3.org/RDF/
+type: Index
+url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/apis.yml
 tags:
 - RDF
 - Semantic Web
 - Linked Data
 - W3C
 - Knowledge Graph
-created: '2025'
-modified: '2025'
+created: '2025-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis: []
-common:
-- type: x-json-schema
-  url: json-schema/rdf-triple.json
-  title: RDF Triple Schema
-- type: x-json-schema
-  url: json-schema/rdf-graph.json
-  title: RDF Graph Schema
-- type: x-json-schema
-  url: json-schema/rdf-dataset.json
-  title: RDF Dataset Schema
-- type: x-json-ld-context
-  url: json-ld/rdf-context.jsonld
-  title: RDF JSON-LD Context
+common: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
