@@ -5,18 +5,26 @@ The Resource Description Framework (RDF) is a W3C standard for representing info
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
 
 ## Tags:
 
  - RDF, Semantic Web, Linked Data, W3C, Knowledge Graph
 
+## Common Properties
+
+- [RDF Triple Schema](json-schema/rdf-triple.json)
+- [RDF Graph Schema](json-schema/rdf-graph.json)
+- [RDF Dataset Schema](json-schema/rdf-dataset.json)
+- [RDF JSON-LD Context](json-ld/rdf-context.jsonld)
+- [RDF 1.1 Concepts and Abstract Syntax (W3C)](https://www.w3.org/TR/rdf11-concepts/)
+
 ## Timestamps
 
-- **Created:** 2025-01-01 
-- **Modified:** 2026-03-16 
+- **Created:** 2025-01-01
+- **Modified:** 2026-04-28
 
 ## Maintainers
 

@@ -1,7 +1,17 @@
 aid: rdf
 name: RDF
-description: The Resource Description Framework (RDF) is a W3C standard for representing information about resources on the web. RDF is the foundation for linked data and the semantic web, providing a graph-based data model where statements are expressed as subject-predicate-object triples. It enables interoperability between systems by using IRIs to identify resources and relationships, supporting multiple serialization formats including RDF/XML, Turtle, N-Triples, and JSON-LD.
+description: >-
+  The Resource Description Framework (RDF) is a W3C standard for representing
+  information about resources on the web. RDF is the foundation for linked data
+  and the semantic web, providing a graph-based data model where statements are
+  expressed as subject-predicate-object triples. It enables interoperability
+  between systems by using IRIs to identify resources and relationships,
+  supporting multiple serialization formats including RDF/XML, Turtle,
+  N-Triples, and JSON-LD.
 type: Index
+position: Consuming
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/apis.yml
 tags:
   - Knowledge Graph
@@ -10,10 +20,30 @@ tags:
   - Semantic Web
   - W3C
 created: '2025-01-01'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis: []
-common: []
+common:
+  - type: JSONSchema
+    name: RDF Triple Schema
+    description: JSON Schema for an RDF triple (subject, predicate, object).
+    url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/json-schema/rdf-triple.json
+  - type: JSONSchema
+    name: RDF Graph Schema
+    description: JSON Schema for an RDF graph in the RDF/JSON serialization format.
+    url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/json-schema/rdf-graph.json
+  - type: JSONSchema
+    name: RDF Dataset Schema
+    description: JSON Schema for an RDF dataset (default graph plus named graphs).
+    url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/json-schema/rdf-dataset.json
+  - type: JSONLDContext
+    name: RDF JSON-LD Context
+    description: JSON-LD context defining core RDF, RDFS, OWL, and related vocabularies.
+    url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/json-ld/rdf-context.jsonld
+  - type: Specification
+    name: RDF 1.1 Concepts and Abstract Syntax
+    description: W3C Recommendation defining the RDF data model.
+    url: https://www.w3.org/TR/rdf11-concepts/
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
