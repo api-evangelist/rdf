@@ -1,0 +1,9 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/json-ld/rdf-context.jsonld",
+  "subject": "https://dbpedia.org/resource/Tim_Berners-Lee",
+  "predicate": "http://xmlns.com/foaf/0.1/name",
+  "object": {
+    "value": "Tim Berners-Lee",
+    "datatype": "http://www.w3.org/2001/XMLSchema#string"
+  }
+}

@@ -1,0 +1,190 @@
+aid: rdf
+name: RDF Vocabulary
+description: >-
+  Normative vocabulary for the Resource Description Framework (RDF) as defined
+  by the W3C RDF Working Group. Covers the RDF data model, serialization formats,
+  related standards (RDFS, OWL, SPARQL, JSON-LD), and implementation concepts.
+  Aligned with RDF 1.1 (W3C Recommendation) and the emerging RDF 1.2 specification.
+created: '2026-05-02'
+modified: '2026-05-02'
+
+terms:
+
+  - term: Triple
+    label: RDF Triple
+    definition: >-
+      The atomic data unit in RDF, consisting of a subject, predicate, and object.
+      A triple makes a statement about a resource. Also called an RDF statement.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+      - RDF 1.2
+
+  - term: Subject
+    label: Subject
+    definition: >-
+      The first component of an RDF triple — the resource being described.
+      The subject MUST be an IRI or a blank node.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: Predicate
+    label: Predicate
+    definition: >-
+      The second component of an RDF triple — the property or relationship
+      between the subject and object. The predicate MUST be an IRI.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: Object
+    label: Object
+    definition: >-
+      The third component of an RDF triple — the value or resource that the
+      subject is related to. The object can be an IRI, a blank node, or a
+      literal value.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: IRI
+    label: Internationalized Resource Identifier
+    definition: >-
+      A generalization of URI that allows non-ASCII characters. IRIs are used
+      as identifiers for subjects, predicates, and object references in RDF.
+      Defined in RFC 3987.
+    tags:
+      - Identification
+      - RDF 1.1
+
+  - term: BlankNode
+    label: Blank Node
+    definition: >-
+      An anonymous node in an RDF graph that does not have a global IRI
+      identifier. Blank nodes can appear in the subject or object position
+      of a triple and are identified within a document by a local identifier.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: Literal
+    label: RDF Literal
+    definition: >-
+      A typed or language-tagged value used in the object position of an RDF
+      triple. A literal has a lexical form, an optional language tag (for
+      rdf:langString), and an optional datatype IRI.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: NamedGraph
+    label: Named Graph
+    definition: >-
+      An RDF graph associated with an IRI name within an RDF dataset. Named
+      graphs allow organizing triples into distinct contexts and are the basis
+      for the RDF dataset model.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: Dataset
+    label: RDF Dataset
+    definition: >-
+      A collection of RDF graphs comprising a default graph and zero or more
+      named graphs. Datasets are the top-level container for RDF data.
+    tags:
+      - Core Data Model
+      - RDF 1.1
+
+  - term: Serialization
+    label: RDF Serialization Format
+    definition: >-
+      A concrete syntax for encoding RDF graphs or datasets as text. Standard
+      serialization formats include Turtle, N-Triples, N-Quads, RDF/XML,
+      JSON-LD, and TriG.
+    tags:
+      - Serialization
+      - RDF 1.1
+
+  - term: Turtle
+    label: Turtle
+    definition: >-
+      A compact, human-readable RDF serialization syntax. Turtle uses
+      prefix declarations to abbreviate IRI namespaces and is widely used
+      for RDF authoring. Defined in W3C Recommendation REC-turtle.
+    tags:
+      - Serialization
+      - RDF 1.1
+
+  - term: JSONLD
+    label: JSON-LD
+    definition: >-
+      A JSON-based serialization for Linked Data that maps JSON documents
+      to RDF using a @context. JSON-LD 1.1 is a W3C Recommendation and
+      is the primary bridge between RDF and JSON ecosystems.
+    tags:
+      - Serialization
+      - JSON
+      - Linked Data
+
+  - term: SPARQL
+    label: SPARQL
+    definition: >-
+      SPARQL Protocol and RDF Query Language — the W3C-standardized query
+      language for RDF data. SPARQL 1.1 (2013) supports SELECT, CONSTRUCT,
+      ASK, and DESCRIBE query forms. SPARQL 1.2 is in development alongside RDF 1.2.
+    tags:
+      - Query Language
+      - W3C Standard
+
+  - term: RDFS
+    label: RDF Schema
+    definition: >-
+      An RDF vocabulary (http://www.w3.org/2000/01/rdf-schema#) that provides
+      basic class and property hierarchies, domain/range constraints, and
+      labels/comments. RDFS is the foundation for OWL.
+    tags:
+      - Schema Language
+      - W3C Standard
+
+  - term: OWL
+    label: Web Ontology Language
+    definition: >-
+      A W3C-standardized ontology language built on RDF and RDFS that provides
+      richer vocabulary for class expressions, property characteristics, and
+      logical inference. OWL 2 is the current W3C Recommendation.
+    tags:
+      - Ontology
+      - W3C Standard
+      - Semantic Web
+
+  - term: LinkedData
+    label: Linked Data
+    definition: >-
+      A set of best practices for publishing and connecting structured data on
+      the Web using HTTP URIs, RDF, and SPARQL. Coined by Tim Berners-Lee.
+    tags:
+      - Semantic Web
+      - Open Data
+
+  - term: TripleTerm
+    label: Triple Term
+    definition: >-
+      A new feature introduced in RDF 1.2 that allows an RDF triple itself to
+      be used as a term in the object position of another triple, enabling
+      direct reification and statements about statements.
+    tags:
+      - RDF 1.2
+      - Advanced Feature
+
+  - term: Reification
+    label: RDF Reification
+    definition: >-
+      The practice of making statements about RDF triples. In RDF 1.1, reification
+      requires four triples using rdf:Statement, rdf:subject, rdf:predicate,
+      and rdf:object. RDF 1.2 introduces triple terms to simplify this.
+    tags:
+      - Advanced Feature
+      - RDF 1.1
+      - RDF 1.2

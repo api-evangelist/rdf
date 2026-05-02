@@ -1,0 +1,30 @@
+{
+  "https://dbpedia.org/resource/Tim_Berners-Lee": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+      {
+        "type": "uri",
+        "value": "http://xmlns.com/foaf/0.1/Person"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "type": "literal",
+        "value": "Tim Berners-Lee",
+        "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "type": "uri",
+        "value": "https://www.w3.org/People/Berners-Lee/"
+      }
+    ],
+    "http://dbpedia.org/ontology/birthDate": [
+      {
+        "type": "literal",
+        "value": "1955-06-08",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  }
+}

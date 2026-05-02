@@ -1,0 +1,43 @@
+{
+  "name": "RDF Graph",
+  "description": "Structure documentation for an RDF graph in the RDF/JSON serialization. An RDF graph is a set of triples organized as a map of subjects to predicate-object arrays.",
+  "format": "Map<IRI, Map<IRI, Array<ObjectValue>>>",
+  "patternKey": "Subject IRI or blank node identifier",
+  "patternValue": {
+    "description": "A map from predicate IRIs to arrays of object values for this subject.",
+    "patternKey": "Predicate IRI",
+    "patternValue": {
+      "type": "array",
+      "description": "Array of RDF object values.",
+      "items": {
+        "name": "ObjectValue",
+        "fields": [
+          {
+            "name": "type",
+            "type": "string (enum: uri, literal, bnode)",
+            "required": true,
+            "description": "The RDF term type: uri for IRI references, literal for typed/language values, bnode for blank nodes."
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "required": true,
+            "description": "The value: an IRI string, lexical literal form, or blank node identifier."
+          },
+          {
+            "name": "lang",
+            "type": "string",
+            "required": false,
+            "description": "BCP47 language tag, present only for language-tagged literals."
+          },
+          {
+            "name": "datatype",
+            "type": "string (uri)",
+            "required": false,
+            "description": "Datatype IRI for typed literals. Defaults to xsd:string."
+          }
+        ]
+      }
+    }
+  }
+}

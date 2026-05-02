@@ -1,0 +1,44 @@
+{
+  "name": "RDF Triple",
+  "description": "Structure documentation for an RDF triple — the fundamental statement unit in the Resource Description Framework, consisting of subject, predicate, and object.",
+  "fields": [
+    {
+      "name": "subject",
+      "type": "string (uri)",
+      "required": true,
+      "description": "The resource being described, expressed as an IRI or blank node identifier."
+    },
+    {
+      "name": "predicate",
+      "type": "string (uri)",
+      "required": true,
+      "description": "The property or relationship connecting the subject to the object, always expressed as an IRI."
+    },
+    {
+      "name": "object",
+      "type": "string (uri) | object (literal)",
+      "required": true,
+      "description": "The value or resource the subject is related to via the predicate. Can be an IRI reference or an RDF literal with optional datatype and language tag.",
+      "subfields": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "The lexical form of the literal value."
+        },
+        {
+          "name": "datatype",
+          "type": "string (uri)",
+          "required": false,
+          "description": "IRI identifying the datatype of the literal. Defaults to xsd:string."
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "description": "BCP47 language tag for language-tagged string literals."
+        }
+      ]
+    }
+  ]
+}
