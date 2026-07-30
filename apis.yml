@@ -11,9 +11,20 @@ description: >-
   (2014). RDF 1.2 is a Candidate Recommendation (2026) adding triple terms
   (RDF-star) and directional language-tagged strings.
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 position: Consuming
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rdf.png
 url: https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/apis.yml
 tags:
   - JSON-LD
