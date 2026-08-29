@@ -11,6 +11,17 @@ description: >-
   (2014). RDF 1.2 is a Candidate Recommendation (2026) adding triple terms
   (RDF-star) and directional language-tagged strings.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
