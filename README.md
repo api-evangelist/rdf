@@ -1,4 +1,4 @@
-# RDF (rdf)
+# RDF
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,70 +64,78 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The Resource Description Framework (RDF) is a W3C standard for representing information about resources on the web. RDF is the foundation for linked data and the semantic web, providing a graph-based data model where statements are expressed as subject-predicate-object triples. It enables interoperability between systems by using IRIs to identify resources and relationships, supporting multiple serialization formats including RDF/XML, Turtle, N-Triples, N-Quads, TriG, and JSON-LD.
+The Resource Description Framework (RDF) is a W3C standard for representing information about resources on the web. RDF is the foundation for linked data and the semantic web, providing a graph-based data model where statements are expressed as subject-predicate-object triples. It enables interoperability between systems by using IRIs to identify resources and relationships, supporting multiple serialization formats including RDF/XML, Turtle, N-Triples, N-Quads, TriG, and JSON-LD. RDF 1.1 is a W3C Recommendation (2014). RDF 1.2 is a Candidate Recommendation (2026) adding triple terms (RDF-star) and directional language-tagged strings.
 
-RDF 1.1 is a W3C Recommendation (2014). RDF 1.2 is a Candidate Recommendation (2026) adding triple terms (RDF-star) and directional language-tagged strings.
+**Areas:** JSON-LD · Knowledge Graph · Linked Data · Ontology · RDF · Semantic Web · SPARQL · W3C
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/rdf/refs/heads/main/apis.yml)
+## RDF on APIs.io
 
-## Scope
+Everything profiled for RDF is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rdf/](https://apis.io/providers/rdf/)** — or go straight to one of the APIs or properties below.
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-JSON-LD, Knowledge Graph, Linked Data, Ontology, RDF, Semantic Web, SPARQL, W3C
+#### JSON Schema (3)
 
-## JSON Schemas
+The data models the API reads and writes.
 
-| Schema | Description |
-|--------|-------------|
-| [RDF Triple Schema](json-schema/rdf-triple.json) | JSON Schema for an RDF triple |
-| [RDF Graph Schema](json-schema/rdf-graph.json) | JSON Schema for an RDF graph in RDF/JSON format |
-| [RDF Dataset Schema](json-schema/rdf-dataset.json) | JSON Schema for an RDF dataset |
+- [RDF Dataset](https://apis.io/schemas/rdf/rdf-dataset/)
+- [RDF Graph](https://apis.io/schemas/rdf/rdf-graph/)
+- [RDF Triple](https://apis.io/schemas/rdf/rdf-triple/)
 
-## JSON Structures
+#### JSON Structure (2)
 
-| Structure | Description |
-|-----------|-------------|
-| [RDF Triple Structure](json-structure/rdf-triple-structure.json) | Field-level documentation for the RDF triple |
-| [RDF Graph Structure](json-structure/rdf-graph-structure.json) | Field-level documentation for the RDF graph serialization |
+Data models expressed in JSON Structure.
 
-## JSON-LD Context
+- [Rdf Graph Structure](https://apis.io/json-structure/rdf/rdf-graph-structure/)
+- [Rdf Triple Structure](https://apis.io/json-structure/rdf/rdf-triple-structure/)
 
-| Context | Description |
-|---------|-------------|
-| [RDF Context](json-ld/rdf-context.jsonld) | JSON-LD context defining core RDF, RDFS, OWL, and related vocabularies |
+#### JSON-LD (1)
 
-## Examples
+Linked-data contexts for the provider's vocabulary.
 
-| Example | Description |
-|---------|-------------|
-| [RDF Triple Example](examples/rdf-triple-example.json) | Example triple using foaf:name for Tim Berners-Lee |
-| [RDF Graph Example](examples/rdf-graph-example.json) | Example RDF graph in RDF/JSON serialization |
+- [Rdf Context](https://apis.io/jsonld/rdf/rdf-context/)
 
-## Vocabulary
+#### Vocabulary (1)
 
-| Vocabulary | Description |
-|------------|-------------|
-| [RDF Vocabulary](vocabulary/rdf-vocabulary.yml) | Normative vocabulary for RDF concepts, serialization formats, and related W3C standards |
+The provider's domain terms, defined.
 
-## Specifications
+- [RDF Vocabulary](https://apis.io/vocabularies/rdf/rdf-vocabulary/)
 
-- [RDF 1.1 Concepts (W3C Recommendation)](https://www.w3.org/TR/rdf11-concepts/)
-- [RDF 1.2 Concepts (W3C Candidate Recommendation, 2026)](https://www.w3.org/TR/rdf12-concepts/)
-- [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
-- [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/)
-- [W3C RDF Working Group](https://www.w3.org/groups/wg/rdf-star/)
+#### Examples (2)
 
-## Timestamps
+Example requests and responses.
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-05-02
+- [Rdf Graph Example](https://apis.io/examples/rdf/rdf-graph-example/)
+- [Rdf Triple Example](https://apis.io/examples/rdf/rdf-triple-example/)
 
-## Maintainers
+#### Governance rules (1)
 
-**FN:** Kin Lane  
-**Email:** kin@apievangelist.com
+Spectral rulesets for the provider's contracts.
+
+- [RDF — jsonschema rules](https://apis.io/rules/rdf/rdf-jsonschema-spectral-rules/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Documentation](https://www.w3.org/groups/wg/rdf-star/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RDF: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rdf/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
